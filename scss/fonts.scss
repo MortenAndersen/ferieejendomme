@@ -1,0 +1,55 @@
+body {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: .8335em;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 .5em 0;
+    font-weight: normal;
+    line-height: 1.2;
+}
+
+h1 {
+    color: $lightblue;
+
+}
+
+h5 {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+p {
+    margin: 0 0 $gap-size 0;
+}
+
+.bold-font {
+    font-weight: bold;
+}
+
+.small-font {
+    font-size: 80%;
+}
+
+.txt-align-right {
+    text-align: right;
+}
+
+.txt-align-center {
+    text-align: center;
+}
+
+a {
+    color: $link-color;
+    text-decoration: underline;
+
+    &:hover {
+        text-decoration: none;
+    }
+}

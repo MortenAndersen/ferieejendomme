@@ -1,0 +1,141 @@
+nav,
+.widget_nav_menu {
+    ul {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    li {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        overflow: hidden;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+
+.main-menu {
+    display: -ms-flexbox;
+    display: flex;
+    //background: none;
+    width: 100%;
+    max-width: none;
+    border: none;
+    position: relative;
+    padding: 0;
+    line-height: 42px;
+    max-height: none;
+    box-shadow: none;
+    overflow: unset;
+    border-top: 1px solid #fff;
+    margin-top: $gap-size;
+    margin-bottom: $gap-size;
+
+    a {
+        border-bottom: 1px solid #fff;
+        display: block;
+
+    }
+
+    ul ul {
+        display: none;
+        padding-right: 0;
+        border: none;
+
+        a {
+            padding-left: 1em;
+            opacity: .8;
+        }
+
+        ul {
+            a {
+                padding-left: 2em;
+            }
+        }
+    }
+
+    li {
+        position: relative;
+    }
+}
+
+@media (min-width: $phone-size) {
+    .main-menu {
+        display: block;
+        margin: 0;
+        line-height: 1.1;
+
+        a {
+            border: none;
+            padding: .75em;
+            margin-bottom: .5em;
+        }
+
+        >ul {
+
+            >li {
+                margin-bottom: ($gap-size * 2) - .5em;
+
+                >a {
+                    opacity: 1;
+                    background-image: linear-gradient(to right, $darkblue, $lightblue);
+                    color: #fff;
+                    border-radius: 3px;
+                    box-shadow: 1px 1px 1px $body-color;
+                    margin-right: 1px;
+
+                    &:hover {
+                        background-image: linear-gradient(to left, $darkblue, $lightblue);
+                    }
+                }
+                &.current_page_item {
+                    > a {
+                        background-image: linear-gradient(to left, $darkblue, $lightblue);
+                    }
+                }
+            }
+
+            ul {
+                display: block;
+
+                a {
+                    padding: 0 0 0 .5em;
+                    opacity: 1;
+                }
+
+                ul {
+                    a {
+                        padding: 0 0 0 1em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $phone-size) {
+
+    // WordPress
+    .main-menu {
+        .current-menu-item {
+            >a {
+                opacity: 1;
+
+                &:before {
+                    content: '> ';
+                }
+            }
+        }
+
+        ul .current-menu-ancestor>ul {
+            display: block;
+        }
+    }
+}

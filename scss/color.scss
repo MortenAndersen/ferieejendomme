@@ -1,0 +1,40 @@
+body {
+    background: $body-color;
+    color: $body-txt-color;
+}
+
+.box {
+    background-color: $box-color;
+
+    &.sidebar {
+        @extend .darklight-tb;
+    }
+}
+
+.darklight-tb {
+    background-image: linear-gradient($darkblue, $lightblue);
+    color: #fff;
+}
+
+.darklight-bt {
+    background-image: linear-gradient($lightblue, $darkblue);
+    color: #fff;
+}
+
+.darklight-rl {
+    background-image: linear-gradient(to right, $darkblue, $lightblue);
+    color: #fff;
+}
+
+.gray-tb {
+    background-image: linear-gradient($body-color, $gray-light);
+}
+
+@media (min-width: $phone-size) {
+    .box {
+        &.sidebar {
+            background-image: none;
+            color: $body-txt-color;
+        }
+    }
+}

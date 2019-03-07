@@ -1,0 +1,34 @@
+.phone {
+    display: block;
+}
+.not-phone {
+    display: none;
+}
+
+@media (min-width: $phone-size) {
+    .not-phone {
+        display: block;
+    }
+    .phone {
+        display: none;
+    }
+}
+
+
+
+.beyond-ipad {
+    display: none;
+}
+
+@media (min-width: $ipad-size) {
+    .ipad-and-below {
+        display: none;
+    }
+
+    .beyond-ipad {
+        display: block;
+    }
+}
+.open-mobile-menu {
+    display: grid !important;
+}
