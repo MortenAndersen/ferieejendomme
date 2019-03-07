@@ -1,31 +1,44 @@
 .sidebar {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: sidebar;
 }
 
 .sidebar2 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
   grid-area: sidebar2;
 }
 
 .content {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
   grid-area: content;
 }
 
 .header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: header;
 }
 
 .footer {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
   grid-area: footer;
 }
 
 .post-footer {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
   grid-area: post-footer;
 }
 
 
 .wrapper {
+  display: -ms-grid;
   display: grid;
-  grid-template-areas:
+      grid-template-areas:
     "header"
     "sidebar"
     "content"
@@ -38,9 +51,16 @@
 
 @media only screen and (min-width: $phone-size) {
   .wrapper {
+    -ms-grid-gap: $gap-size;
     grid-gap: $gap-size;
+    -ms-grid-template-columns: 20% auto 20%;
     grid-template-columns: 20% auto 20%;
-    grid-template-areas:
+    -ms-grid-template-areas:
+      "header  header  header"
+      "sidebar content sidebar2"
+      "footer  footer  footer"
+      "post-footer  post-footer  post-footer";
+      grid-template-areas:
       "header  header  header"
       "sidebar content sidebar2"
       "footer  footer  footer"
@@ -48,8 +68,14 @@
     max-width: 1100px;
     margin: 0 auto;
     .page-template-page-no-aside & {
+      -ms-grid-template-columns: 20% auto;
       grid-template-columns: 20% auto;
-    grid-template-areas:
+    -ms-grid-template-areas:
+      "header  header"
+      "sidebar content"
+      "footer  footer"
+      "post-footer  post-footer";
+      grid-template-areas:
       "header  header"
       "sidebar content"
       "footer  footer"
