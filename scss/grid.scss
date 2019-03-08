@@ -53,6 +53,45 @@
   .wrapper {
     -ms-grid-gap: $gap-size;
     grid-gap: $gap-size;
+    -ms-grid-template-columns: 25% auto;
+    grid-template-columns: 25% auto;
+    -ms-grid-template-areas:
+      "header  header"
+      "sidebar content"
+      "sidebar2 sidebar2"
+      "footer  footer"
+      "post-footer  post-footer";
+      grid-template-areas:
+      "header  header"
+      "sidebar content"
+      "sidebar2 sidebar2"
+      "footer  footer"
+      "post-footer  post-footer";
+    max-width: 1100px;
+    margin: 0 auto;
+    .page-template-page-no-aside & {
+      -ms-grid-template-columns: 25% auto;
+      grid-template-columns: 25% auto;
+    -ms-grid-template-areas:
+      "header  header"
+      "sidebar content"
+      "footer  footer"
+      "post-footer  post-footer";
+      grid-template-areas:
+      "header  header"
+      "sidebar content"
+      "footer  footer"
+      "post-footer  post-footer";
+    }
+  }
+}
+
+
+
+@media only screen and (min-width: $ipad-small-size) {
+  .wrapper {
+    -ms-grid-gap: $gap-size;
+    grid-gap: $gap-size;
     -ms-grid-template-columns: 20% auto 20%;
     grid-template-columns: 20% auto 20%;
     -ms-grid-template-areas:

@@ -20,6 +20,7 @@ textarea {
 
 input {
     outline: none;
+    -webkit-appearance: none;
     line-height: 1.7;
     padding: .25em;
     background: $body-color;
@@ -35,8 +36,8 @@ input {
     }
 
     &[type=submit] {
-        padding-left: 3em;
-        padding-right: 3em;
+        padding: 0 3em;
+        line-height: 3;
         margin: 1em 0 0 0;
         float: right;
         @extend .darklight-tb;
