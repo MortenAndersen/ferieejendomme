@@ -1,0 +1,98 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sidebar {
+    width: 100%;
+    flex: 1 100%;
+    order: 2;
+}
+
+.sidebar2 {
+    flex: 1 100%;
+    order: 4;
+}
+
+.content {
+    flex: 1 100%;
+    order: 3;
+}
+
+.header {
+    flex: 1 100%;
+    order: 1;
+    margin-bottom: $gap-size;
+}
+
+.footer {
+    flex: 1 100%;
+    order: 5;
+}
+
+.post-footer {
+    flex: 1 100%;
+    order: 6;
+}
+
+@media (min-width: $phone-size) {
+    .wrapper {
+        .content {
+            flex: 1 70%;
+            max-width: 70%;
+        }
+
+        .sidebar {
+            flex: 1 30%;
+            max-width: calc(30% - 1.2em);
+        }
+    }
+}
+
+@media (min-width: $ipad-small-size) {
+    .wrapper {
+        .content {
+            flex: 1 50%;
+            max-width: 50%;
+        }
+
+        .sidebar,
+        .sidebar2 {
+            flex: 1 25%;
+            max-width: calc(25% - 1.2em);
+        }
+    }
+
+    .page-template-page-no-aside {
+        .wrapper {
+            .content {
+                flex: 1 70%;
+                max-width: 70%;
+            }
+
+            .sidebar {
+                flex: 1 30%;
+                max-width: calc(30% - 1.2em);
+            }
+        }
+    }
+}
+
+.box {
+    padding: $gap-size;
+    margin-bottom: $gap-size;
+    @extend .border-radius;
+}
