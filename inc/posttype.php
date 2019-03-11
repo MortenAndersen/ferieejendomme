@@ -6,20 +6,19 @@ function ferieejendomme_create_posttype() {
 
     // Kommissionsaftale
     register_post_type('ejendom', array('labels' => array(
-        'name' => __('Ejendomme', 'ferieejendomme-domain'),
-        'singular_name' => __('Ejendom', 'ferieejendomme-domain'),
-        'add_new_item' => __('Tilfølj ny ejendom', 'ferieejendomme-domain'),
-        'add_new' => __('Tilføj ny ejendom', 'ferieejendomme-domain'),
-        'edit_item' => __('Ret ejendom', 'ferieejendomme-domain'),
-        'view_item' => __('Se ejendom', 'ferieejendomme-domain'),
-        'update_item' => __('Opdater ejendom', 'ferieejendomme-domain')
+            'name' => __('Ejendomme', 'ferieejendomme-domain'),
+            'singular_name' => __('Ejendom', 'ferieejendomme-domain'),
+            'add_new_item' => __('Tilfølj ny ejendom', 'ferieejendomme-domain'),
+            'add_new' => __('Tilføj ny ejendom', 'ferieejendomme-domain'),
+            'edit_item' => __('Ret ejendom', 'ferieejendomme-domain'),
+            'view_item' => __('Se ejendom', 'ferieejendomme-domain'),
+            'update_item' => __('Opdater ejendom', 'ferieejendomme-domain')
         ),
-        'public' => true,
-        'has_archive' => true,
-        //'taxonomies' => array( 'category' ),
-        'menu_icon' => 'dashicons-admin-home',
-        'supports' => array('title'),
-        'rewrite' => array('slug' => 'ejendom'),
+            'public' => true,
+            'has_archive' => true,
+            'menu_icon' => 'dashicons-admin-home',
+            'rewrite' => array('slug' => 'ejendom'),
+            'supports' => array('title', 'thumbnail'),
     ));
 }
 
@@ -28,10 +27,6 @@ function ferieejendomme_function() {
     flush_rewrite_rules();
 }
 register_activation_hook( __FILE__, 'ferieejendomme_function' );
-
-
-
-
 
 // Register Custom Taxonomy
 function custom_taxonomy() {

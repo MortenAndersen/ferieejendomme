@@ -1,0 +1,15 @@
+Foto
+Link til ejendomsmægler
+
+Byggeår
+Grundareal
+Boligareal
+Antal rum
+Antal sovepladser
+
+Område
+Vej
+Vej nr
+Post nr
+
+Ejerandel
