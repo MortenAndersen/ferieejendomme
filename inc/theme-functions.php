@@ -22,3 +22,24 @@ else :
 
 endif;
 }
+
+// Ejendom
+
+function ferieejedomme_ejendom_list() {
+    echo '<div class="box content">';
+    the_archive_title( '<h1>', '</h1>' );
+    the_archive_description( '<div class="taxonomy-description">', '</div>' );
+    echo '<ul class="ejendomme-list">';
+    if(have_posts()) : while(have_posts()) : the_post();
+        echo '<li>';
+        echo '<a href="' . get_the_permalink() . '">';
+            the_title();
+        echo '</a>';
+        echo '</li>';
+endwhile; else :
+    echo '<p>Ingen ejendomme endnu</p>';
+ endif;
+echo '</ul>';
+posts_nav_link();
+echo '</div>';
+}
