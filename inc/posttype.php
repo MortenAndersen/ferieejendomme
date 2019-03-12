@@ -18,7 +18,7 @@ function ferieejendomme_create_posttype() {
             'has_archive' => true,
             'menu_icon' => 'dashicons-admin-home',
             'rewrite' => array('slug' => 'ejendom'),
-            'supports' => array('title', 'thumbnail'),
+            'supports' => array('title', 'editor', 'thumbnail'),
     ));
 }
 
@@ -63,7 +63,11 @@ function custom_taxonomy() {
         "show_in_menu" => true,
         'show_in_nav_menus'          => true,
         'show_tagcloud'              => true,
-        'rewrite'                    => array('slug' => 'land'),
+        'rewrite' => array(
+        'slug'         => 'land',
+        'with_front'   => false,
+        'hierarchical' => true,
+    ),
     );
     register_taxonomy( 'land', array( 'ejendom' ), $args );
 }

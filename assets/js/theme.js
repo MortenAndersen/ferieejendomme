@@ -24,5 +24,6 @@
         $(".main-menu li li:has(ul)").addClass('has-sub-menu');
 
 
+
     });
 }(jQuery));

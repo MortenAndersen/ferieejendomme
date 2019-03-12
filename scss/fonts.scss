@@ -19,6 +19,11 @@ h1 {
     color: $lightblue;
 
 }
+h4 {
+   font-weight: bold;
+   border-bottom: 1px solid $body-color;
+   padding-bottom: .25em;
+}
 
 h5 {
     font-size: 1em;
@@ -28,7 +33,12 @@ h5 {
 p {
     margin: 0 0 $gap-size 0;
 }
-
+.img-caption {
+    text-align: right;
+    font-size: 80%;
+    font-style: italic;
+    margin-top: .5em;
+}
 .bold-font {
     font-weight: bold;
 }

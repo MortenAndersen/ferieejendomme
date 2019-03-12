@@ -1,0 +1,73 @@
+ul.terms {
+	li:not(:first-child) {
+		padding-left: 1em;
+		font-size: .9em;
+		&:before {
+			content: '- ';
+		}
+	}
+}
+.omraade,
+.post-nr {
+	display: block;
+}
+.box {
+	padding: $gap-size;
+	border: 1px solid $body-color;
+	overflow: hidden;
+	margin-bottom: $gap-size;
+}
+.data {
+	display: block;
+	.label {
+		min-width: 135px;
+		display: inline-block;
+	}
+}
+.ejendomsmaelger-link {
+	display: block;
+	width: 100%;
+	text-decoration: none;
+	line-height: 3em;
+	text-align: center;
+	@extend .darklight-bt;
+	&:hover {
+		@extend .darklight-tb;
+	}
+}
+.content-images {
+	img {
+	margin: 0;
+}
+margin: 0 0 $gap-size 0;
+
+}
+
+.andel-barometer {
+	margin: 0;
+	width: 100%;
+	height: 2em;
+	background: #266516;
+	span {
+		float: left;
+			height: 100%;
+			text-align: center;
+			color: #fff;
+			line-height: 2em;
+
+		&.int-procent {
+			background: #a76513;
+			}
+		}
+}
+.forklaring {
+	display: inline-block;
+	height: 100%;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background: #a76513;
+	&.led {
+		background: #266516;
+	}
+}

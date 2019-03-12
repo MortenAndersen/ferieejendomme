@@ -43,3 +43,19 @@ echo '</ul>';
 posts_nav_link();
 echo '</div>';
 }
+
+
+function ferieejedomme_the_post_thumbnail() {
+    $caption = get_the_post_thumbnail_caption();
+    if ( has_post_thumbnail() ) {
+        echo '<div class="content-images">';
+        $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
+        echo '<a href="'.esc_url($featured_img_url).'" rel="data-lightbox" data-lightbox="hus" data-title="' . get_the_title() . '">';
+            the_post_thumbnail('large');
+        echo '</a>';
+        if(!empty($caption)) {
+            echo '<div class="img-caption">' . $caption . '</div>';
+        }
+        echo '</div>';
+    }
+}

@@ -10,7 +10,7 @@ add_action( 'wp_enqueue_scripts', 'ferieejendomme_theme_footer_enqueue_scripts' 
 
 // Theme jQuery fil
 function ferieejendomme_theme_scripts() {
-  wp_register_script( 'theme-script', get_template_directory_uri() . '/assets/js/theme.js', array('jquery') );
+  wp_register_script( 'theme-script', get_template_directory_uri() . '/assets/js/theme.min.js', array('jquery') );
   wp_enqueue_script( 'theme-script' );
 }
 add_action( 'wp_enqueue_scripts', 'ferieejendomme_theme_scripts' );

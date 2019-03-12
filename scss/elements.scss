@@ -16,6 +16,15 @@ img {
 .trans {
     transition: .5s all;
 }
+ul.design-list {
+    margin: 0;
+    padding: 0;
+    li {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+}
 
 .widget {
     overflow: hidden;
