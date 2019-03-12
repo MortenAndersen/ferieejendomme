@@ -39,16 +39,19 @@ if( $adresse ) {
 	echo '<div class="box adresse-box">';
 	echo '<h4>Adresse:</h4>';
 	if ( $adresse['omrade'] ) {
-		echo '<span class="adresse omraade">' . $adresse['omrade'] . '</span>';
+		echo '<span class="adresse omraade">' . $adresse['omrade'] . '</span><br />';
 	}
 	if ( $adresse['vej'] ) {
 		echo '<span class="adresse vej">' . $adresse['vej'] . '</span>';
 	}
 	if ( $adresse['vej_nr'] ) {
-		echo ' <span class="adresse vej-nr">' . $adresse['vej_nr'] . '</span>';
+		echo ' <span class="adresse vej-nr">' . $adresse['vej_nr'] . '</span><br />';
 	}
 	if ( $adresse['post_nr'] ) {
 		echo '<span class="adresse post-nr">' . $adresse['post_nr'] . '</span>';
+	}
+	if ( $adresse['by'] ) {
+		echo ' <span class="adresse by">' . $adresse['by'] . '</span>';
 	}
 	echo '</div>';
 }
@@ -75,8 +78,10 @@ if( $data ) {
 		echo '<span class="data antal-sovepladser"><span class="label">Antal sovepladser</span>: ' . $data['antal_sovepladser'] . '</span>';
 	}
 	if ( $data['pris'] ) {
+		$tyve = $data['pris']*.2;
 		$data['pris'] = number_format($data['pris'], 0, ',', '.');
-		echo '<span class="data pris"><span class="label">Pris</span>: ' . $data['pris'] . ' DKK</span>';
+		echo '<span class="data pris"><span class="label">Pris (samlet)</span>: ' . $data['pris'] . ' DKK</span>';
+				echo '<span class="data pris"><span class="label">Andel på 20%</span>: ' . $tyve . ' DKK</span>';
 	}
 	echo '</div>';
 }
