@@ -77,6 +77,7 @@ if( $data ) {
 	if ( $data['antal_sovepladser'] ) {
 		echo '<span class="data antal-sovepladser"><span class="label">Antal sovepladser</span>: ' . $data['antal_sovepladser'] . '</span>';
 	}
+
 	if ( $data['pris'] ) {
 		$tal = $data['pris'];
 		$tyve = number_format($tal*.2, 0, ',', '.');
@@ -85,12 +86,14 @@ if( $data ) {
 
 		$data['pris'] = number_format($data['pris'], 0, ',', '.');
 		echo '<span class="data pris"><span class="label">Pris (samlet)</span>: ' . $data['pris'] . ' DKK</span>';
+
+		echo '<br /><h4>Andel:</h4>';
+		echo '<span class="data pris"><span class="label">Andel = 20%</span>: ' . $tyve . ' DKK</span>';
+		echo '<span class="data pris"><span class="label">Andel = 25%</span>: ' . $femtyve . ' DKK</span>';
+		echo '<span class="data pris"><span class="label">Andel = 1/3</span>: ' . $tredje . ' DKK</span>';
+		echo '<span class="data"><em>Priseksempler på ejerandele.</em></span>';
 	}
-	echo '<br /><h4>Andel:</h4>';
-	echo '<span class="data pris"><span class="label">Andel = 20%</span>: ' . $tyve . ' DKK</span>';
-	echo '<span class="data pris"><span class="label">Andel = 25%</span>: ' . $femtyve . ' DKK</span>';
-	echo '<span class="data pris"><span class="label">Andel = 1/3</span>: ' . $tredje . ' DKK</span>';
-	echo '<span class="data"><em>Priseksempler på ejerandele.</em></span>';
+
 	echo '</div>';
 }
 

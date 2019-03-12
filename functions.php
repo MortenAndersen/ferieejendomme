@@ -44,6 +44,7 @@ function ferieejendomme_theme_setup() {
 	add_theme_support( 'automatic-feed-links' );
 	// Images
 	add_theme_support( 'post-thumbnails' );
+	add_image_size( 'small-image', 200, 120, true );
 
 	// Shortkoder i widget
 	add_filter( 'widget_text', 'do_shortcode' );

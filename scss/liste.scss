@@ -1,0 +1,22 @@
+.ejendomme-list {
+	margin: 0;
+	padding: 0;
+	li {
+
+		overflow: hidden;
+		padding: 0 0 $gap-size 0;
+		margin: 0 0 $gap-size 0;
+		list-style-type: none;
+		border-bottom: 1px solid $body-color;
+	}
+ a {
+ 	text-decoration: none;
+ 	color: inherit;
+ }
+ img {
+ 	float: left;
+ 	margin: 0 $gap-size 0 0;
+ 	width: auto;
+ 	height: 52px;
+ }
+}
