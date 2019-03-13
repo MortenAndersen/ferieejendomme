@@ -25,6 +25,9 @@ endif;
 
 // Ejendom
 
+
+
+
 function ferieejedomme_ejendom_list() {
     echo '<div class="box content">';
     the_archive_title( '<h1>', '</h1>' );
@@ -37,14 +40,15 @@ function ferieejedomme_ejendom_list() {
         echo '<li>';
         echo '<a href="' . get_the_permalink() . '">';
             the_post_thumbnail('small-image');
-            the_title('<h6>', '</h6>');
-            echo $adresse['vej'] . ' ' . $adresse['vej_nr'] . ', ' . $adresse['post_nr'] . ' ' . $adresse['by'];
-            echo '<br />';
-            //echo $data['pris'];
-            echo 'grundareal: ' . $data['grundareal'] . ' m<sup>2</sup></span>';
-            echo ' / Boligareal: ' . $data['boligareal'] . ' m<sup>2</sup></span>';
-            echo ' / Rum: ' . $data['antal_rum'];
-
+            echo '<div class="text-data">';
+                the_title('<h6>', '</h6>');
+                echo $adresse['vej'] . ' ' . $adresse['vej_nr'] . ', ' . $adresse['post_nr'] . ' ' . $adresse['by'];
+                echo '<br />';
+                //echo $data['pris'];
+                echo 'grundareal: ' . $data['grundareal'] . ' m<sup>2</sup></span>';
+                echo ' / Boligareal: ' . $data['boligareal'] . ' m<sup>2</sup></span>';
+                echo ' / Rum: ' . $data['antal_rum'];
+                echo '</div>';
         echo '</a>';
         echo '</li>';
 endwhile; else :
@@ -55,6 +59,37 @@ posts_nav_link();
 echo '</div>';
 }
 
+
+// Forside loop
+
+function ferieejedomme_ejendom_list_front() {
+$loop = new WP_Query( array( 'post_type' => 'ejendom', 'posts_per_page' => 3) );
+    echo '<ul class="ejendomme-list">';
+    if($loop->have_posts()) : while($loop->have_posts()) : $loop->the_post();
+        $adresse = get_field('adresse');
+        $data = get_field('data');
+
+        echo '<li>';
+        echo '<a href="' . get_the_permalink() . '">';
+            the_post_thumbnail('small-image');
+            echo '<div class="text-data">';
+                the_title('<h6>', '</h6>');
+                echo $adresse['vej'] . ' ' . $adresse['vej_nr'] . ', ' . $adresse['post_nr'] . ' ' . $adresse['by'];
+                echo '<br />';
+                echo 'grundareal: ' . $data['grundareal'] . ' m<sup>2</sup></span>';
+                echo ' / Boligareal: ' . $data['boligareal'] . ' m<sup>2</sup></span>';
+                echo ' / Rum: ' . $data['antal_rum'];
+                echo '</div>';
+        echo '</a>';
+        echo '</li>';
+endwhile; else :
+    echo '<p>Ingen ejendomme endnu</p>';
+ endif;
+echo '</ul>';
+
+}
+
+// billeder
 
 function ferieejedomme_the_post_thumbnail() {
     $caption = get_the_post_thumbnail_caption();

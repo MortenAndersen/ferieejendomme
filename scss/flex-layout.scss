@@ -95,4 +95,12 @@ html {
     padding: $gap-size;
     margin-bottom: $gap-size;
     @extend .border-radius;
+    .home & {
+        &.content {
+            padding: 0;
+        }
+    }
+    &.header {
+        padding: 0;
+    }
 }

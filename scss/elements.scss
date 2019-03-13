@@ -26,6 +26,20 @@ ul.design-list {
     }
 }
 
+article {
+    .home & {
+        padding: $gap-size;
+    }
+}
+.box .widget-front-img {
+    margin: 0;
+    padding: $gap-size;
+   figure{
+        margin: 0;
+        width: 100% !important;
+   }
+
+}
 .widget {
     overflow: hidden;
     margin-bottom: $gap-size;
@@ -39,9 +53,13 @@ ul.design-list {
         overflow: hidden;
     }
 }
+
 @media only screen and (min-width: $ipad-small-size) {
 aside {
     font-size: .9em;
+}
+.box .widget-front-img {
+    padding: 0;
 }
 }
 

@@ -49,6 +49,30 @@ function ferieejendomme_widgets_init() {
 			'after_title'   => '</h5>',
 		)
 	);
+
+	register_sidebar(
+		array(
+			'name'          => __( 'Forside billede', 'ferieejendomme-domain' ),
+			'id'            => 'frontimg',
+			'description'   => __( 'Billede på forsiden', 'ferieejendomme-domain' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s widget-front-img">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<span class="screen-reader-text">',
+			'after_title'   => '</span>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => __( 'Banner', 'ferieejendomme-domain' ),
+			'id'            => 'banner',
+			'description'   => __( 'Billede på forsiden', 'ferieejendomme-domain' ),
+			'before_widget' => '<div class="banner">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<span class="screen-reader-text">',
+			'after_title'   => '</span>',
+		)
+	);
 }
 
 add_action( 'widgets_init', 'ferieejendomme_widgets_init' );

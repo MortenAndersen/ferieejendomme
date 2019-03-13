@@ -44,7 +44,7 @@ function ferieejendomme_theme_setup() {
 	add_theme_support( 'automatic-feed-links' );
 	// Images
 	add_theme_support( 'post-thumbnails' );
-	add_image_size( 'small-image', 200, 120, true );
+	add_image_size( 'small-image', 400, 240, true );
 
 	// Shortkoder i widget
 	add_filter( 'widget_text', 'do_shortcode' );
@@ -59,6 +59,24 @@ function ferieejendomme_theme_setup() {
 add_action( 'after_setup_theme', 'ferieejendomme_theme_setup' );
 
 endif;
+
+add_filter( 'get_the_archive_title', function ( $title ) {
+
+    if( is_category() ) {
+
+        $title = single_cat_title( '', false );
+
+    }
+
+    return $title;
+
+});
+
+
+// Fjener prefix til title - archive etc.
+add_filter('get_the_archive_title', function ($title) {
+    return preg_replace('/^\w+: /', '', $title);
+});
 
 // ---------------------------------------------------
 

@@ -23,6 +23,15 @@
         $('.current-menu-ancestor > .menu-trigger').addClass('active-trigger');
         $(".main-menu li li:has(ul)").addClass('has-sub-menu');
 
+        // Banner Slider
+        $('.banner .gallery').bxSlider({
+            mode: 'fade',
+            speed: 1500,
+            auto: true,
+            pager: false,
+            controls: false
+        });
+
 
 
     });

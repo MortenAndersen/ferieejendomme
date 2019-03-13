@@ -10,5 +10,5 @@
 <body <?php body_class(); ?>>
 	<div class="wrapper">
 		<div class="box header darklight-tb">
-			<h2>Header</h2>
+			<?php dynamic_sidebar( 'banner' ); ?>
 		</div>
