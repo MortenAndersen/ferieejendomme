@@ -122,6 +122,11 @@ $link = get_field('link_til_ejendomsmaegler');
 
 ?>
 
+
+
+<?php dynamic_sidebar( 'formular' ); // Formular ?>
+
+
 	</article>
 </div>
 

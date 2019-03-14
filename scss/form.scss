@@ -73,3 +73,10 @@ select {
         width: auto;
     }
 }
+
+.formular {
+    margin-top: $gap-size * 2;
+    overflow: hidden;
+    padding: $gap-size;
+    border: $gap-size solid $body-color;
+}

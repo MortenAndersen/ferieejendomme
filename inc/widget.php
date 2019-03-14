@@ -73,6 +73,18 @@ function ferieejendomme_widgets_init() {
 			'after_title'   => '</span>',
 		)
 	);
+
+	register_sidebar(
+		array(
+			'name'          => __( 'Formular', 'ferieejendomme-domain' ),
+			'id'            => 'formular',
+			'description'   => __( 'Formular på ejendom', 'ferieejendomme-domain' ),
+			'before_widget' => '<div class="formular">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h5 class="widget-title">',
+			'after_title'   => '</h5>',
+		)
+	);
 }
 
 add_action( 'widgets_init', 'ferieejendomme_widgets_init' );
