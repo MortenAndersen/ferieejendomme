@@ -32,6 +32,9 @@
             controls: false
         });
 
+        // Formular - copy html
+
+        $("input[name=ejendom-navn]").val($('h1').text());
 
 
     });

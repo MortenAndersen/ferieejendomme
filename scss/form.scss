@@ -80,3 +80,7 @@ select {
     padding: $gap-size;
     border: $gap-size solid $body-color;
 }
+
+input[name=ejendom-navn] {
+    display: none;
+}
