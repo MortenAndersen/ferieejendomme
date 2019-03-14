@@ -8,14 +8,13 @@
         padding: 0;
         margin: 0 0 $gap-size 0;
         list-style-type: none;
-        border-bottom: 1px solid #e1e3e4;
-        border-right: 1px solid #e1e3e4;
         @extend .gray-tb;
     }
 
     a {
         text-decoration: none;
         color: inherit;
+        display: block;
     }
 
     img {
@@ -28,8 +27,32 @@
     padding: $gap-size;
 }
 
-
+.andel-bar {
+    @extend .darklight-bt;
+    padding: 5px 0;
+    overflow: hidden;
+    border-top: solid $gap-size / 2;
+    clear: both;
+    span {
+        text-align: center;
+        display: block;
+        border-bottom: 1px solid rgba(255,255,255,.8);
+        line-height: 2.5;
+        &:last-of-type {
+            border: none;
+        }
+    }
+}
 @media (min-width: $phone-size) {
+
+    .andel-bar {
+        span {
+        float: left;
+        width: calc(100% / 3);
+        border: none;
+        line-height: 1.1;
+        }
+    }
 
     .ejendomme-list {
         img {
@@ -43,7 +66,7 @@
 
     .text-data {
         padding: 5px $gap-size;
-        float: left;
+        display: inline-block;
         font-size: .9em;
         line-height: 1.2;
     }

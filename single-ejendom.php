@@ -42,10 +42,7 @@ if( $adresse ) {
 		echo '<span class="adresse omraade">' . $adresse['omrade'] . '</span><br />';
 	}
 	if ( $adresse['vej'] ) {
-		echo '<span class="adresse vej">' . $adresse['vej'] . '</span>';
-	}
-	if ( $adresse['vej_nr'] ) {
-		echo ' <span class="adresse vej-nr">' . $adresse['vej_nr'] . '</span><br />';
+		echo '<span class="adresse vej">' . $adresse['vej'] . '</span><br />';
 	}
 	if ( $adresse['post_nr'] ) {
 		echo '<span class="adresse post-nr">' . $adresse['post_nr'] . '</span>';
@@ -85,12 +82,12 @@ if( $data ) {
 		$tredje = number_format($tal/3, 0, ',', '.');
 
 		$data['pris'] = number_format($data['pris'], 0, ',', '.');
-		echo '<span class="data pris"><span class="label">Pris (samlet)</span>: ' . $data['pris'] . ' DKK</span>';
+		echo '<span class="data pris"><span class="label">Pris (samlet)</span>: ' . $data['pris'] . ' ' .$data['valuta'] . '</span>';
 
 		echo '<br /><h4>Andel:</h4>';
-		echo '<span class="data pris"><span class="label">Andel = 20%</span>: ' . $tyve . ' DKK</span>';
-		echo '<span class="data pris"><span class="label">Andel = 25%</span>: ' . $femtyve . ' DKK</span>';
-		echo '<span class="data pris"><span class="label">Andel = 1/3</span>: ' . $tredje . ' DKK</span>';
+		echo '<span class="data pris"><span class="label">Andel = 20%</span>: ' . $tyve . ' ' .$data['valuta'] . '</span>';
+		echo '<span class="data pris"><span class="label">Andel = 25%</span>: ' . $femtyve . ' ' .$data['valuta'] . '</span>';
+		echo '<span class="data pris"><span class="label">Andel = 1/3</span>: ' . $tredje . ' ' .$data['valuta'] . '</span>';
 		echo '<span class="data"><em>Priseksempler på ejerandele.</em></span>';
 	}
 
@@ -133,6 +130,7 @@ $link = get_field('link_til_ejendomsmaegler');
   	</div>
 
 	<div class="box sidebar2">
+		<?php get_template_part( 'test' ); ?>
 		<?php get_template_part( 'sidebar' ); ?>
 	</div>
 
