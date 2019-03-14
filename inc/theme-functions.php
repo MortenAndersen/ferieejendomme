@@ -79,6 +79,7 @@ function ferieejedomme_ejendom_list_elements() {
                             echo number_format($pris_tr,0,",",".") . ' ' . $data['valuta'];
                         echo '</span>';
                     echo '</div>';
+
                 }
 
             echo '</a>';
@@ -105,7 +106,7 @@ echo '</ul>';
 posts_nav_link();
 
 echo '</div>';
-
+wp_reset_query();
 }
 
 
@@ -122,7 +123,27 @@ endwhile; else :
     echo '<p>Ingen ejendomme endnu</p>';
  endif;
 echo '</ul>';
+wp_reset_query();
+}
 
+// Ejendomme aside loop
+
+function ferieejedomme_ejendom_list_aside() {
+
+    global $post;
+    $loop = new WP_Query( array( 'post_type' => 'ejendom', 'orderby'   => 'rand', 'posts_per_page' => 3, 'post__not_in' => array($post->ID) ) );
+
+    echo '<h3>Se andre ejendomme:</h3>';
+    echo '<ul class="ejendomme-list">';
+    if($loop->have_posts()) : while($loop->have_posts()) : $loop->the_post();
+
+        ferieejedomme_ejendom_list_elements();
+
+endwhile; else :
+    echo '<p>Ingen ejendomme endnu</p>';
+ endif;
+echo '</ul>';
+wp_reset_query();
 }
 
 // Billeder på ejendom

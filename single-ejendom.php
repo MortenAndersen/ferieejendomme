@@ -130,7 +130,6 @@ $link = get_field('link_til_ejendomsmaegler');
   	</div>
 
 	<div class="box sidebar2">
-		<?php get_template_part( 'test' ); ?>
 		<?php get_template_part( 'sidebar' ); ?>
 	</div>
 

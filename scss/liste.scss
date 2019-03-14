@@ -43,14 +43,24 @@
         }
     }
 }
+
 @media (min-width: $phone-size) {
 
     .andel-bar {
+        font-size: .8em;
         span {
         float: left;
         width: calc(100% / 3);
         border: none;
-        line-height: 1.1;
+        line-height: 1.2;
+        aside & {
+            width: 100%;
+            border-bottom: 1px solid rgba(255,255,255,.8);
+        line-height: 2.5;
+        &:last-of-type {
+            border: none;
+        }
+        }
         }
     }
 
@@ -60,6 +70,9 @@
             margin: 0;
             width: auto;
             height: 52px;
+            aside & {
+                height: auto;
+            }
         }
 
     }
@@ -69,6 +82,9 @@
         display: inline-block;
         font-size: .9em;
         line-height: 1.2;
+        aside & {
+            padding: $gap-size;
+        }
     }
 
 }
