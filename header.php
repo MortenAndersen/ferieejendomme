@@ -9,6 +9,6 @@
 
 <body <?php body_class(); ?>>
 	<div class="wrapper">
-		<div class="box header darklight-tb">
+		<div class="box header">
 			<?php dynamic_sidebar( 'banner' ); ?>
 		</div>

@@ -20,7 +20,8 @@ ferieejedomme_the_post_thumbnail();
 // Lande term
 	$terms = get_the_terms( $post->ID , 'land' );
 	if ($terms > 0 ) {
-echo '<div class="box">';
+echo '<div class="box term-box">';
+	echo '<h4>Land / Område:</h4>';
 	echo '<ul class="terms design-list">';
 	    foreach ( $terms as $term ) {
 	        $term_link = get_term_link( $term, 'land' );
