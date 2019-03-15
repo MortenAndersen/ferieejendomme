@@ -26,7 +26,7 @@
         // Banner Slider
         $('.banner .gallery').bxSlider({
             mode: 'fade',
-            speed: 1500,
+            speed: 2500,
             auto: true,
             pager: false,
             controls: false

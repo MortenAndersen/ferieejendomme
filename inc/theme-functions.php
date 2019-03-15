@@ -162,3 +162,15 @@ function ferieejedomme_the_post_thumbnail() {
         echo '</div>';
     }
 }
+
+// Logo
+
+function ferieejedomme_logo() {
+    // Logo
+    $custom_logo_id = get_theme_mod( 'custom_logo' );
+    $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+
+    if ( has_custom_logo() ) {
+        echo '<a href="' . esc_url( home_url( '/' ) ) . '" class="logo"><img src="'. esc_url( $logo[0] ) .'"></a>';
+    }
+}

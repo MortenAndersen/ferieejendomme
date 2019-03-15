@@ -11,4 +11,5 @@
 	<div class="wrapper">
 		<div class="box header">
 			<?php dynamic_sidebar( 'banner' ); ?>
+			<?php ferieejedomme_logo(); ?>
 		</div>

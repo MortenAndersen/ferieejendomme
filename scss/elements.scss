@@ -109,7 +109,13 @@ article {
 	}
 
 .header {
-    min-height: 230px;
+    position: relative;
+}
+.logo {
+    position: absolute;
+    bottom: $gap-size;
+    left: $gap-size;
+    z-index: 1000;
 }
 
 .post-footer {

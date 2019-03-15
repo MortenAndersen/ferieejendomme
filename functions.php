@@ -49,6 +49,9 @@ function ferieejendomme_theme_setup() {
 	// Shortkoder i widget
 	add_filter( 'widget_text', 'do_shortcode' );
 
+	// Logo
+	add_theme_support( 'custom-logo' );
+
 	// Menu
 	register_nav_menus(array(
 		'main-menu' => __( 'Main Menu', 'ferieejendomme_theme' ),
