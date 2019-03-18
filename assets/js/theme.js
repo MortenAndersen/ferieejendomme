@@ -35,6 +35,11 @@
         // Formular - copy html
 
         $("input[name=ejendom-navn]").val($('h1').text());
+        $("input[name=ejendom-vej]").val($('.vej').text());
+        $("input[name=ejendom-post-nr]").val($('.post-nr').text());
+        $("input[name=ejendom-by]").val($('.by').text());
+        $("input[name=ejendom-url]").val(window.location);
+
 
 
     });

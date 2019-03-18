@@ -1,8 +1,13 @@
 [text ejendom-navn]
+[text ejendom-vej]
+[text ejendom-navn]
+[text ejendom-post-nr]
+[text ejendom-by]
+[text ejendom-url]
 <h4>MINE STAMDATA</h4>
-<p>(Stamdata: Alle felter med * skal udfyldes. Stamdata er til brug forferieejendomme.dk og videregives kun til andre med dit samtykke.)</p>
-<label>Navn(e) <span class="req">*</span>
-tilføj evt. ægtefælle eller andre som ønskes med i din ejerandel:
+
+<label>Navn <span class="req">*</span>
+
 [text* your-name]
 </label>
 

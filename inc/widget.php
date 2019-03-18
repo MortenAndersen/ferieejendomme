@@ -81,8 +81,8 @@ function ferieejendomme_widgets_init() {
 			'description'   => __( 'Formular på ejendom', 'ferieejendomme-domain' ),
 			'before_widget' => '<div class="formular">',
 			'after_widget'  => '</div>',
-			'before_title'  => '<h5 class="widget-title">',
-			'after_title'   => '</h5>',
+			'before_title'  => '<span class="screen-reader-text">',
+			'after_title'   => '</span>',
 		)
 	);
 }
