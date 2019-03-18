@@ -27,6 +27,7 @@ textarea {
     outline: none;
     padding: .5em;
     border: 1px solid $body-color;
+    @extend .border-radius;
 }
 
 input {
@@ -109,6 +110,14 @@ select {
         &:last-of-type {
             margin-bottom: 0;
         }
+    }
+    .widget-title {
+     margin-bottom: 2em;
+    font-size: 1.2em;
+    color: #fff;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-align: right;
     }
 }
 .req {

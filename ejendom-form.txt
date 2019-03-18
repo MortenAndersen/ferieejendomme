@@ -1,9 +1,10 @@
+<div class="hide-input">
 [text ejendom-navn]
 [text ejendom-vej]
-[text ejendom-navn]
 [text ejendom-post-nr]
 [text ejendom-by]
 [text ejendom-url]
+</div>
 <h4>MINE STAMDATA</h4>
 
 <label>Navn <span class="req">*</span>
