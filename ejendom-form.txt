@@ -1,0 +1,66 @@
+[text ejendom-navn]
+<h4>MINE STAMDATA</h4>
+<p>(Stamdata: Alle felter med * skal udfyldes. Stamdata er til brug forferieejendomme.dk og videregives kun til andre med dit samtykke.)</p>
+<label>Navn(e) <span class="req">*</span>
+tilføj evt. ægtefælle eller andre som ønskes med i din ejerandel:
+[text* your-name]
+</label>
+
+<label>Vej / nr <span class="req">*</span>
+[text* vej]
+</label>
+
+<label>Postnr / by <span class="req">*</span>
+[text* postby]
+</label>
+
+<label>Tlf.1 <span class="req">*</span>
+[text* tlf1]
+</label>
+
+<label>Tlf.2
+[text tlf2]
+</label>
+
+<label>Mail <span class="req">*</span>
+[email* your-email]
+</label>
+
+<h4>EJERANDEL OG ØKONMI</h4>
+<p>(Ejerandel og økonomi: Oplysningerne er til brug for ferieejendomme.dk. Disse videregives kun til financier sammen med stamoplysningerne, hvis et finanseringsforslag ønskes. Bemærk dog at det normalt er det billigste selv at forestå finansieringen, da dine egen bank, kreditforening eller andre kender dig bedst.)</p>
+
+<div>Jeg ønsker en ejerandel på <span class="req">*</span>
+[checkbox* ejerandel label_first "20%" "25%" "1/3" "50%"]
+</div>
+
+<label>og/eller en maksimal investering på kr:
+[text maxinvest]
+</label>
+
+<h4>INTERESSEOPLYSNINGER</h4>
+<p> (Interesseoplysninger: Oplysninger om interesser mv. kan blive brugt i forbindelse med sammensætning af mulig ejerkreds. Oplysningerne vil kunne blive præsenteret for de øvrige mulige medejere, når en potentiel ejerkreds er sammensat. Skriv derfor kun det som du synes andre må/skal vide.)</p>
+
+<label>Baggrund</label>
+[textarea baggrund placeholder "fx alder, børn, familie, civil status, job osv."]
+
+<label>Interesser</label>
+[textarea Interesser placeholder "fx slappe af, fiske, sejle, kortspil, udeliv, fællesskab, handy mand osv."]
+
+<label>Eventuelle andre bemærkninger til mulige medejere</label>
+[textarea Bemrkninger placeholder "fx rygning, husdyr, allergi osv."]
+
+<h4>GENERELT</h4>
+
+<label>Bemærkninger</label>
+[textarea andet]
+
+
+<span class="req">*</span>
+[checkbox* interessetilkendegivelse "Jeg er ikke bundet af denne interessetilkendegivelse men jeg skal dog omgående give besked til ferieejendomme.dk, hvis jeg ikke længere ønsker min profil registreret.
+Så længe min profil er registreret, ønsker jeg at modtage eventuelle nyheder, aktuelle henvendelser mv. fra ferieejendomme.dk"]
+
+<span class="req">*</span>
+[checkbox* accepterer "Jeg accepterer at ferieejendomme.dk har mine personlige oplysninger …… jf. persondata…bla bla bla Mine personlige oplysninger vil blive slettet hvis jeg beder ferieejendomme om det."]
+
+
+[submit "Indsend"]

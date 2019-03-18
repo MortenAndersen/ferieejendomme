@@ -81,6 +81,7 @@ if( $data ) {
 		$tyve = number_format($tal*.2, 0, ',', '.');
 		$femtyve = number_format($tal*.25, 0, ',', '.');
 		$tredje = number_format($tal/3, 0, ',', '.');
+		$halvtreds = number_format($tal/2, 0, ',', '.');
 
 		$data['pris'] = number_format($data['pris'], 0, ',', '.');
 		echo '<span class="data pris"><span class="label">Pris (samlet)</span>: ' . $data['pris'] . ' ' .$data['valuta'] . '</span>';
@@ -89,6 +90,7 @@ if( $data ) {
 		echo '<span class="data pris"><span class="label">Andel = 20%</span>: ' . $tyve . ' ' .$data['valuta'] . '</span>';
 		echo '<span class="data pris"><span class="label">Andel = 25%</span>: ' . $femtyve . ' ' .$data['valuta'] . '</span>';
 		echo '<span class="data pris"><span class="label">Andel = 1/3</span>: ' . $tredje . ' ' .$data['valuta'] . '</span>';
+		echo '<span class="data pris"><span class="label">Andel = 50%</span>: ' . $halvtreds . ' ' .$data['valuta'] . '</span>';
 		echo '<span class="data"><em>Priseksempler på ejerandele.</em></span>';
 	}
 
@@ -118,7 +120,7 @@ echo '</div>';
 $link = get_field('link_til_ejendomsmaegler');
 
 	if( $link ) {
-		echo '<a class="ejendomsmaelger-link" href="' . $link . '" target="_blank" rel="nofollow">Ejendomsmælger</a>';
+		echo '<a class="ejendomsmaelger-link" href="' . $link . '" target="_blank" rel="nofollow">Se flere oplysninger hos ejendomsmægler</a>';
 	}
 
 ?>
