@@ -22,6 +22,10 @@
 	<span></span>
 </div>
 
+<div class="dev-by">
+<a href="https://www.hjemmesider.dk" target="_blank" rel="nofollow">Development by: Hjemmesider.dk</a>
+</div>
+
 <?php wp_footer(); ?>
 </body>
 </html>

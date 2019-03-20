@@ -1,0 +1,44 @@
+<p><strong>Ejendomstype</strong>
+Geografisk placering:
+[geografisk-uden]
+
+Nærområdet:
+[naer-uden]
+
+Ejendomsinteresse:
+[ejendominter-uden]
+
+Størrelse:
+[stoerlse-uden]
+
+Funktioner:
+[funktioner-uden]
+
+Eventuelle minimumskrav;
+[minkrav-uden]</p>
+
+<p><strong>Persondata:</strong>
+[your-name-uden]
+[your-email-uden]
+[vej-uden]
+[postby-uden]
+[tlf1-uden]
+[tlf2-uden]</p>
+
+<p><strong>Ejerandel:</strong>
+Procent: [ejerandel-uden]
+Maksimal investering: [maxinvest-uden]</p>
+
+<p><strong>Interesse:</strong>
+Baggrund:
+[baggrund-uden]
+
+Interesser:
+[Interesser-uden]
+
+Bemærkninger:
+[Bemrkninger-uden]
+
+Andre bemærkninger:
+[andet]
+</p>

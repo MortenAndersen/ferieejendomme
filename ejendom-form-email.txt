@@ -1,0 +1,30 @@
+<p><strong>[ejendom-navn]</strong>
+[ejendom-vej]
+[ejendom-post-nr] [ejendom-by]
+[ejendom-url]</p>
+
+<p><strong>Persondata:</strong>
+[your-name]
+[your-email]
+[vej]
+[postby]
+[tlf1]
+[tlf2]</p>
+
+<p><strong>Ejerandel:</strong>
+Procent: [ejerandel]
+Maksimal investering: [maxinvest]</p>
+
+<p><strong>Interesse:</strong>
+Baggrund:
+[baggrund]
+
+Interesser:
+[Interesser]
+
+Bemærkninger:
+[Bemrkninger]
+
+Andre bemærkninger:
+[andet]
+</p>

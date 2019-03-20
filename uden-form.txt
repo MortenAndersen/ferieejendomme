@@ -1,0 +1,96 @@
+<h4>Interessant ejendomstype</h4>
+
+<label>Geografisk placering
+[textarea geografisk-uden placeholder "(fx land, landsdel, by, område eller andet)"]
+</label>
+
+<label>Nærområdet
+[textarea naer-uden placeholder "(fx naturgrund, havudsigt, nær badestrand, fiskeri, golf osv.)"]
+</label>
+
+<label>Ejendomsinteresse
+[textarea ejendominter-uden placeholder "(fx gammelt, charmerende, nyt, grund med byggeprojekt osv.)"]
+</label>
+
+<label>Størrelse
+[textarea stoerlse-uden placeholder "(fx til min 5 personer, antal værelser, m2 osv.)"]
+</label>
+
+<label>Funktioner
+[textarea funktioner-uden placeholder "(fx sauna, spa, pool eller måske netop ikke osv.)
+
+"]
+</label>
+
+<label>Eventuelle minimunskrav
+[textarea minkrav-uden placeholder "(fx prioritering af ønskerne)"]
+</label>
+
+<label>Andet
+[textarea andet-uden]
+</label>
+
+<h4>MINE STAMDATA</h4>
+
+<label>Navn <span class="req">*</span>
+[text* your-name-uden]
+</label>
+
+<label>Vej / nr <span class="req">*</span>
+[text* vej-uden]
+</label>
+
+<label>Postnr / by <span class="req">*</span>
+[text* postby-uden]
+</label>
+
+<label>Tlf.1 <span class="req">*</span>
+[text* tlf1-uden]
+</label>
+
+<label>Tlf.2
+[text tlf2-uden]
+</label>
+
+<label>Mail <span class="req">*</span>
+[email* your-email-uden]
+</label>
+
+<h4>EJERANDEL OG ØKONMI</h4>
+<p>(Ejerandel og økonomi: Oplysningerne er til brug for ferieejendomme.dk. Disse videregives kun til financier sammen med stamoplysningerne, hvis et finanseringsforslag ønskes. Bemærk dog at det normalt er det billigste selv at forestå finansieringen, da dine egen bank, kreditforening eller andre kender dig bedst.)</p>
+
+<div>Jeg ønsker en ejerandel på <span class="req">*</span>
+[checkbox* ejerandel-uden label_first "20%" "25%" "1/3" "50%"]
+</div>
+
+<label>og/eller en maksimal investering på kr:
+[text maxinvest-uden]
+</label>
+
+<h4>INTERESSEOPLYSNINGER</h4>
+<p> (Interesseoplysninger: Oplysninger om interesser mv. kan blive brugt i forbindelse med sammensætning af mulig ejerkreds. Oplysningerne vil kunne blive præsenteret for de øvrige mulige medejere, når en potentiel ejerkreds er sammensat. Skriv derfor kun det som du synes andre må/skal vide.)</p>
+
+<label>Baggrund</label>
+[textarea baggrund-uden placeholder "fx alder, børn, familie, civil status, job osv."]
+
+<label>Interesser</label>
+[textarea Interesser-uden placeholder "fx slappe af, fiske, sejle, kortspil, udeliv, fællesskab, handy mand osv."]
+
+<label>Eventuelle andre bemærkninger til mulige medejere</label>
+[textarea Bemrkninger-uden placeholder "fx rygning, husdyr, allergi osv."]
+
+<h4>GENERELT</h4>
+
+<label>Bemærkninger</label>
+[textarea andet]
+
+
+<span class="req">*</span>
+[checkbox* interessetilkendegivelse-uden "Jeg er ikke bundet af denne interessetilkendegivelse men jeg skal dog omgående give besked til ferieejendomme.dk, hvis jeg ikke længere ønsker min profil registreret.
+Så længe min profil er registreret, ønsker jeg at modtage eventuelle nyheder, aktuelle henvendelser mv. fra ferieejendomme.dk"]
+
+<span class="req">*</span>
+[checkbox* accepterer-uden "Jeg accepterer at ferieejendomme.dk har mine personlige oplysninger …… jf. persondata…bla bla bla Mine personlige oplysninger vil blive slettet hvis jeg beder ferieejendomme om det."]
+
+
+[submit "Indsend"]

@@ -162,3 +162,11 @@ article {
     }
 }
 
+.dev-by {
+    max-width: 1200px;
+    margin: $gap-size auto;
+    a {
+        text-decoration: none;
+        font-size: .8em;
+    }
+}

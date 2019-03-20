@@ -1,0 +1,33 @@
+<p><strong>Foreslået ejendom:</strong>
+[your-vej-foreslaa]
+[your-postnr-foreslaa]
+[your-land-foreslaa]
+Ejendomsmægler: [your-salghos-foreslaa]
+Link til ejendomsmægler: [your-link-foreslaa]
+Jeg ejer eller er relateret til den nuværende ejer: [relateret]</p>
+
+<p><strong>Persondata:</strong>
+[your-name-foreslaa]
+[your-email-foreslaa]
+[vej-foreslaa]
+[postby-foreslaa]
+[tlf1-foreslaa]
+[tlf2-foreslaa]</p>
+
+<p><strong>Ejerandel:</strong>
+Procent: [ejerandel-foreslaa]
+Maksimal investering: [maxinvest-foreslaa]</p>
+
+<p><strong>Interesse:</strong>
+Baggrund:
+[baggrund-foreslaa]
+
+Interesser:
+[Interesser-foreslaa]
+
+Bemærkninger:
+[Bemrkninger-foreslaa]
+
+Andre bemærkninger:
+[andet]
+</p>
