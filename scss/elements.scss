@@ -165,8 +165,10 @@ article {
 .dev-by {
     max-width: 1200px;
     margin: $gap-size auto;
+    padding: 0 1em;
     a {
         text-decoration: none;
         font-size: .8em;
+        color: darkgray;
     }
 }

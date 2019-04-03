@@ -33,11 +33,13 @@
     overflow: hidden;
     border-top: solid $gap-size / 2;
     clear: both;
+
     span {
         text-align: center;
         display: block;
-        border-bottom: 1px solid rgba(255,255,255,.8);
+        border-bottom: 1px solid rgba(255, 255, 255, .8);
         line-height: 2.5;
+
         &:last-of-type {
             border: none;
         }
@@ -48,19 +50,22 @@
 
     .andel-bar {
         font-size: .8em;
+
         span {
-        float: left;
-        width: 33.33%;
-        border: none;
-        line-height: 1.2;
-        aside & {
-            width: 100%;
-            border-bottom: 1px solid rgba(255,255,255,.8);
-        line-height: 2.5;
-        &:last-of-type {
+            float: left;
+            width: 33.33%;
             border: none;
-        }
-        }
+            line-height: 1.2;
+
+            aside & {
+                width: 100%;
+                border-bottom: 1px solid rgba(255, 255, 255, .8);
+                line-height: 2.5;
+
+                &:last-of-type {
+                    border: none;
+                }
+            }
         }
     }
 
@@ -70,6 +75,7 @@
             margin: 0;
             width: auto;
             height: 52px;
+
             aside & {
                 height: auto;
             }
@@ -82,9 +88,53 @@
         display: inline-block;
         font-size: .9em;
         line-height: 1.2;
+
         aside & {
             padding: $gap-size;
         }
     }
 
+}
+
+
+@media (min-width: $phone-size) {
+    aside {
+        .ejendomme-list {
+            overflow: hidden;
+
+            li {
+                width: calc(50% - .5em);
+                float: left;
+
+                &:nth-child(2n) {
+                    margin-left: 1em;
+                }
+
+                &:nth-last-child(-n+1) {
+                    display: none;
+                }
+            }
+        }
+
+    }
+}
+@media (min-width: $ipad-small-size) {
+    aside {
+        .ejendomme-list {
+
+
+            li {
+                width: 100%;
+
+                &:nth-child(2n) {
+                    margin-left: 0;
+                }
+
+                &:nth-last-child(-n+1) {
+                    display: block;
+                }
+            }
+        }
+
+    }
 }
